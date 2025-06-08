@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const nameInput = document.getElementById('name')
 	const surnameInput = document.getElementById('surname')
 	const emailInput = document.getElementById('email')
-	const ageInput = document.getElementById('age')
+	const numberInput = document.getElementById('number_own')
 	const dateBirthInput = document.getElementById('date_birth')
 	const userTableBody = document.getElementById('user-table-body')
 
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		const name = nameInput.value.trim()
 		const surname = surnameInput.value.trim()
 		const email = emailInput.value.trim()
-		const age = ageInput.value.trim()
+		const number_own = numberInput.value.trim()
 		const date_birth = dateBirthInput.value.trim()
 
 		if (!name || !email) {
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				headers: {
 					'Content-Type': 'application/json',
 				},
-				body: JSON.stringify({ name, surname, email, age, date_birth }),
+				body: JSON.stringify({ name, surname, email, number_own, date_birth }),
 			})
 
 			const result = await response.json()
@@ -66,8 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
 					<td>${user.name}</td>
 					<td>${user.surname}</td>
 					<td>${user.email}</td>
-					<td>${user.age || ''}</td>
-					<td>${user.date_birth || ''}</td>
+					<td>${user.number_own}</td>
+					<td>${user.date_birth}</td>
 				`
 				userTableBody.appendChild(row)
 			})
