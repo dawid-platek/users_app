@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Użytkownicy</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="theme-color" content="#317EFB" />
+</head>
+
+<body>
+
+    <h2>Dodaj użytkownika</h2>
+    <form id="user-form">
+        <input type="text" id="name" name="name" placeholder="Imię" required />
+        <input type="text" id="surname" name="surname" placeholder="Nazwisko" required />
+        <input type="email" id="email" name="email" placeholder="Email" required />
+        <input type="number" id="age" name="age" placeholder="Wiek" required />
+        <input type="date" id="date_birth" name="date_birth" placeholder="Data urodzenia" required />
+        <button type="submit">Dodaj</button>
+    </form>
+
+    <h2>Lista użytkowników</h2>
+    <div class="table-wrapper"></div>
+    <table>
+        <thead>
+            <tr>
+                <th>Imię</th>
+                <th>Nazwisko</th>
+                <th>E-mail</th>
+                <th>Wiek</th>
+                <th>Data urodzenia</th>
+            </tr>
+        </thead>
+        <tbody id="user-table-body"></tbody>
+    </table>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
